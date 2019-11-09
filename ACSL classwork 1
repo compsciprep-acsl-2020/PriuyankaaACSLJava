@@ -1,0 +1,21 @@
+public class Acslleft 
+{
+	public int[] rotate_left3(int[] numbers)
+	{
+		int[] changed = new int[3];
+		changed[0]= numbers[1];
+		changed[1]= numbers[2];
+		changed[2]= numbers[0];
+		return changed;
+	}
+	
+	public static void main(String args[])
+	{
+		Acslleft a = new Acslleft();
+		int[] test = {1, 2, 3};
+		int[] output = a.rotate_left3(test);
+		System.out.println("["+output[0]+", "+output[1]+", "+output[2]+"]");
+		
+	}
+}	
+
