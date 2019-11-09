@@ -1,0 +1,39 @@
+public class Acsl2
+{
+	public boolean haveThree(int[] numbers)
+	{
+      int check= 0;
+      int j = 0;
+		boolean check4three=false;
+      int[] indexes = new int[3];
+      for(int i=0;i<numbers.length;i++)
+      {
+         if (numbers[i] == 3)
+         {
+            indexes[j] = i;
+            j+=1;
+            check+=1; 
+         }
+      }
+      if(check ==3)
+      {
+         int diff1 = Math.abs(indexes[0]-indexes[1]);
+         int diff2 = Math.abs(indexes[0]-indexes[2]);
+         int diff3 = Math.abs(indexes[1]-indexes[2]);
+         if(diff1==1||diff2==1||diff3==1) check4three = false;
+         else check4three = true;
+         
+      }
+		return check4three;
+	}
+	
+	public static void main(String args[])
+	{
+		Acsl2 a = new Acsl2();
+		int[] test = {3, 4, 3, 3, 4};
+		boolean check3 = a.haveThree(test);
+      System.out.println(check3);
+		
+	}
+}	
+
